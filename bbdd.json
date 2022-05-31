@@ -1,0 +1,51 @@
+{
+  "carta": {
+    "bocadillos": {
+      "mixto": 1.50,
+      "pollo": 1.70,
+      "queso": 1.80,
+      "serrano": 1.20,
+      "tortilla": 1.70
+    },
+    "sandwiches": {
+      "mixto": 1.50,
+      "pollo": 1.70,
+      "queso": 1.80,
+      "serrano": 1.20,
+      "tortilla": 1.70
+    },
+    "croissants": {
+      "mixto": 1.50,
+      "pollo": 1.70,
+      "queso": 1.80,
+      "serrano": 1.20,
+      "tortilla": 1.70
+    },
+    "cafes": {
+      "sande": 16435.50,
+      "barraquito": 1.70,
+      "cortado": 1.80
+    },
+    "bebidas": {
+      "agua": 1,
+      "te": 1.70,
+      "jugos": 1.80
+    }
+  },
+  "pedidos": {
+    "pedido1": {
+      "nombre": "Alvaro",
+      "apellidos": "Rod gom",
+      "edad": 20,
+      "email": "alu0101362953@ull.edu.es",
+      "producto": "agua"
+    },
+    "pedido2": {
+      "nombre": "usuario",
+      "apellidos": "usu ario",
+      "edad": 30,
+      "email": "alu0000000000@ull.edu.es",
+      "producto": "croissant mixto"
+    }
+  }
+}

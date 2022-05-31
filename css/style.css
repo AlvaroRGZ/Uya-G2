@@ -1,0 +1,25 @@
+nav ul a,
+nav .brand-logo {
+  color: #fdfefe ;
+}
+
+.sidenav-trigger {
+    color: #26a69a;
+}
+
+.breadcrumb:before {
+  color:purple;
+}
+
+.parallax-container {
+  height: auto;
+}
+
+.linea {
+  border: 2px solid red;
+  border-radius: 50px;
+}
+
+categoria {
+  font-size: 1em red;
+}
