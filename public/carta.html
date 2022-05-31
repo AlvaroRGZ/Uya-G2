@@ -15,8 +15,8 @@
 
   <body>
     <nav class="deep-purple" role="navigation">
-      <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo" role="img">Logo</a>
+      <div class="nav-wrapper container" role="navigation">
+          <a id="logo-container" href="index.html" class="brand-logo" role="img">Logo</a>
           <ul class="right hide-on-med-and-down">
               <li role="listitem"><a href="#" role="link">Login</a>
           </ul>
@@ -29,66 +29,82 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text" role="menuitem"><i class="material-icons">menu</i></a>
       </div>
       <div class="nav-wrapper container" role="navigation">
-        <div class="col s12">
-          <a href="index.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Home</a>
+        <div class="row" role="bre">
+          <div class="col s12">
+            <a href="index.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Home</a>
+            <a href="carta.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Carta</a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <div align="center">
-      <div class="card">
-        <div class="card-content">
-          <h5>Carta</h5>
-          <p>Conheça nosso cardápio e escolha qual de nossos deliciosos pratos e bebidas você deseja</p>
-        </div>
-        <div class="card-action">
-          <p id="infoCartaDesdeBBDD"></p>
-        </div>
-      </div>
-    </div> 
-    
-  <footer class="page-footer deep-purple">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
+    <main>
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-            
+        <h2 class="purple-text center">Carta</h2>
+        <div class="row">
+          <p id="error"></p>
+          <div class="col s12 m4 l6">
+            <p id="bebidas"></p>
+          </div>
+          <div class="col s12 m4 l6">
+            <p id="cafes"></p>
+          </div>
+        </div>
+        <div class="row center">
+          <div class="col s12 m4 l4">
+            <p id="bocadillos"></p>
+          </div>
+          <div class="col s12 m4 l4">
+            <p id="sandwichs"></p>
+          </div>
+          <div class="col s12 m4 l4">
+            <p id="croissants"></p>
+          </div>
+        </div>
+      </div> 
+    </main>
+    
+    <footer class="page-footer deep-purple" style="width:100%;"> 
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Company Bio</h5>
+            <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Settings</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Link 1</a></li>
+              <li><a class="white-text" href="#!">Link 2</a></li>
+              <li><a class="white-text" href="#!">Link 3</a></li>
+              <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Link 1</a></li>
+              <li><a class="white-text" href="#!">Link 2</a></li>
+              <li><a class="white-text" href="#!">Link 3</a></li>
+              <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
+
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-    <script src="../js/init.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+      <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="module" src="../js/obtenerCarta.js" type="text/javascript"> </script>
+    <script src="../js/init.js"></script>
   </body>
 </html>

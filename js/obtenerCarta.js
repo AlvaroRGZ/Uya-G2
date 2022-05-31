@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import { getDatabase, ref, set, onValue, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+import { showCarta } from "./showCarta.js";
 
 var firebaseConfig = {
     apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
@@ -21,25 +22,14 @@ $(document).ready(function( event ) {
     if (snapshot.exists()) {
       var data = JSON.parse(JSON.stringify(snapshot.val()));
       console.log(data);
-      var itemsNames = Object.keys(data);
-      var items = [];
-      itemsNames.forEach((categoria) => {
-        items.push( `<li id="cat${categoria} "><h5>${categoria}</h5></li>` );
-        $.each(data[categoria], function(nombre, precio) {
-          items.push( "<li id='" + nombre + "'>" + `${nombre} : ${precio}` + "</li>" );
-        });
-      });
-      $( "<ul/>", {
-        "class": "my-new-list",
-        html: items.join( "" )
-      }).appendTo( "#infoCartaDesdeBBDD" );
+      showCarta(data);
     } else {
       // $('#incomingUsuario')
       console.log("No data available");
-      $( "<ul/>", {
-        "class": "my-new-list",
-        html: "No data available"
-      }).appendTo( "#infoCartaDesdeBBDD" );
+      $( "<div/>", {
+        "class": "container",
+        html: "<p>No data available</p>"
+      }).appendTo( "#error" );
     }
   }).catch((error) => {
     console.error(error);
