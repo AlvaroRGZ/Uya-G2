@@ -24,3 +24,8 @@ categoria {
   font-size: 1em red;
 }
 
+.vl {
+  border-left: 2px solid black;
+  height: 185px;
+}
+

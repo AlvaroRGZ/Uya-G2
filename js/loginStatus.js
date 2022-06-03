@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import { getDatabase, ref, set, onValue, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-import { showCarta } from "./showCarta.js";
+import { capitalize } from "./showCarta.js";
 
 var firebaseConfig = {
     apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
@@ -22,17 +22,23 @@ $(document).ready(function( event ) {
     if (snapshot.exists()) {
       var data = JSON.parse(JSON.stringify(snapshot.val()));
       console.log(data);
+      var login_on = false;
+      var userName;
       for (const user in data) {
-        let item;
         if (data[user].login == true) {
-          item = `<a href=#>${user}</a><i class="small material-icons">face</i>`;
+          userName = user;
+          login_on = true;
           break;
+        } else {
+          login_on = false;
         }
-        item = `<a href=#>Login</a>`;
-        $( "<a/>", {
-          "class": "card horizontal  white",
-          html: items.join( "" )
-        }).appendTo( "#bebidas" );
+      }
+      if (login_on) {
+        showUserLoginOn(userName);
+        showMenuResponsiveLoginOn(userName);
+      } else {
+        showInfoLoginOff();
+        showMenuResponsiveLoginOff();
       }
     } else {
       // $('#incomingUsuario')
@@ -46,3 +52,47 @@ $(document).ready(function( event ) {
     console.error(error);
   });
 });
+
+function showUserLoginOn(userName) {
+  let name = capitalize(userName);
+  let item = `<a href="./profile.html">${name}</a>`;
+  $( "<li/>", {
+    class: "white-text",
+    html: item
+  }).appendTo( "#login-status" );
+}
+
+function showMenuResponsiveLoginOn(userName) {
+  let name = capitalize(userName);
+  let item = `<a href="./profile.html">${name}</a>`;
+  $( "<li/>", {
+    class: "white-text",
+    html: item
+  }).appendTo( "#menu-responsive" );
+}
+
+function showInfoLoginOff() {
+  let item = `<a href="./register.html">Registrarse</a>`;
+  let item2 = `<a href="./login.html">Iniciar Sesion</a>`;
+  $( "<li/>", {
+    class: "white-text",
+    html: item
+  }).appendTo( "#login-status" );
+  $( "<li/>", {
+    class: "white-text",
+    html: item2
+  }).appendTo( "#login-status" );
+}
+
+function showMenuResponsiveLoginOff() {
+  let item = `<a href="./register.html">Registrarse</a>`;
+  let item2 = `<a href="./login.html">Iniciar Sesion</a>`;
+  $( "<li/>", {
+    class: "white-text",
+    html: item
+  }).appendTo( "#menu-responsive" );
+  $( "<li/>", {
+    class: "white-text",
+    html: item2
+  }).appendTo( "#menu-responsive" );
+}
