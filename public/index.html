@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,46 +14,42 @@
   </head>
 
   <body>
-    <nav class="deep-purple" role="navigation">
+    <nav class="black" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo" role="img">Logo</a>
-            <ul class="right hide-on-med-and-down">
-                <li role="listitem"><a href="#" role="link">Login</a>
+            <a id="logo-container" href="index.html" class="brand-logo" role="img">
+              <img src="../img/logo-banner.png" width="63px" alt="Logo">
+            </a>
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+              <i class="material-icons white-text" alt="icono de menu desplegable">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">                                                                     
+              <li><a href="#" role="link">Registrar</a></li>
+              <li id="login-status" role="link"><a href="#">Login</a></li>
             </ul>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#" role="link">Register</a>
-          </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#" role="link" aria-hidden="true">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text" role="menuitem"><i class="material-icons">menu</i></a>
         </div>
         <div class="nav-wrapper container" role="navigation">
           <div class="col s12">
-            <a href="index.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Home</a>
+            <a href="index.html" class ="breadcrumb black-text lighten-1" role="link">Inicio</a>
           </div>
         </div>
     </nav>
 
+    <ul class="sidenav" id="menu-responsive">
+      <br><br>
+      <li><a href="#">Registrar</a></li>
+      <li id="login-status-sidenav"><a href="#">Login</a></li>
+    </ul>
+
     <br><br><br>
 
-		<div class="parallax-container" role="main">
-			<div class="section no-pad-bot">
-				<div class="container">
-          <div class="row">
-            <br><br>
-            <h1 class="header center deep-purple-text" role="heading">UyA-mos a comer</h1>
-            <div class="row center">
-              <h5 class="header col s12 text-darken-2 deep-purple-text" role="note"><em>"Barriga vazia, coração sem alegria"</em></h5>
-            </div>
-            <div class="row center">
-              <a href="#" id="download-button" class="btn-large waves-effect waves-light deep-purple lighten-1" role="button" tabindex="0">PEÇA AGORA</a>
-            </div>
-            <br><br>
-          </div>
-				</div>
-			</div>
-      <div class="parallax" role="banner"><img src="../img/background.jpg" alt="Unsplashed background img 2" style="opacity:initial; transform: translate3d(-50%, 242.043px, 0px);" role="img"></div>
+		<div class="container" role="main">
+      <div class="row center">
+        <img src="../img/banner-2.jpg" alt="Banner" width="100%" style="opacity:initial; transform: translate3d(0%, 0%, 0px);" role="img">
+      </div>
+      <div class="row center">
+        <a href="#" id="download-button" class="btn-large waves-effect waves-light black lighten-1" role="button" tabindex="0">PEÇA AGORA</a>
+      </div>
 		</div>
 
     <br><br><br>
@@ -63,7 +59,7 @@
         <div class="col s12 m4 12">
           <div class="card">
             <div class="card-image">
-              <img src="../img/menu.png" alt="menu.png" role="img" aria-labelledby="card1" aria-describedby="desccard1">
+              <img src="../img/icon-carta-2.png" alt="menu.png" role="img" aria-labelledby="card1" aria-describedby="desccard1">
             </div>
             <div class="card-content">
               <h5 id="card1" class="orange-text" role="heading" tabindex="0">Carta</h5>
@@ -77,21 +73,21 @@
         <div class="col s12 m4 12">
           <div class="card">
             <div class="card-image">
-              <img src="../img/horario.png" alt="menu.png" role="img" aria-labelledby="card2" aria-describedby="desccard2">
+              <img src="../img/icon-calendar-2.png" alt="menu.png" role="img" aria-labelledby="card2" aria-describedby="desccard2">
             </div>
             <div class="card-content">
               <h5 id="card2" class="blue-text" role="heading" tabindex="0">Horario</h5>
               <p id="desccard2">Não seja imprudente! Confira nossos horários para não ficar parado de última hora</p>
             </div>
             <div class="card-action">
-              <a href="#" class="blue-text" role="link">Descubra aqui</a>
+              <a href="horario.html" class="blue-text" role="link">Descubra aqui</a>
             </div>
           </div>
         </div> 
         <div class="col s12 m4 12">
           <div class="card">
             <div class="card-image">
-              <img src="../img/pedido.jpg" alt="menu.png" role="img" aria-labelledby="card3" aria-describedby="desccard3">
+              <img src="../img/icond-pedido-2.png" alt="menu.png" role="img" aria-labelledby="card3" aria-describedby="desccard3">
             </div>
             <div class="card-content">
               <h5 id="card3" class="red-text" role="heading" tabindex="0">Pedidos</h5>
@@ -106,7 +102,7 @@
     </div>
 
     
-  <footer class="page-footer deep-purple">
+  <footer class="page-footer black">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -140,13 +136,13 @@
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com" role="link" aria-hidden="true">Materialize</a>
       </div>
     </div>
-  </footer>
-            
+  </footer>           
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-      <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../js/init.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <!--  Scripts-->
+  <script src="../js/init.js"></script>
+  <script type="module" src="../js/obtenerCarta.js" type="text/javascript"> </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   </body>
 </html>

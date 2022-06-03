@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>UYA-MOS A COMER</title>
+    <title>Horario</title>
     
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!--Import own css files-->
+    <link rel="stylesheet"  href="../css/tablas.css">
   </head>
 
   <body>
-    <nav class="deep-purple" role="navigation">
+
+    <nav class="black" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo" role="img">Logo</a>
             <ul class="right hide-on-med-and-down">
@@ -30,14 +33,81 @@
         </div>
         <div class="nav-wrapper container" role="navigation">
           <div class="col s12">
-            <a href="index.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Home</a>
+            <a href="index.html" class ="breadcrumb black-text lighten-1" role="link">Home</a>
+            <a href="horario.html" class ="breadcrumb black-text lighten-1" role="link">Horario</a>
           </div>
         </div>
     </nav>
 
-    <br><br><br>
-    
-    <footer class="page-footer deep-purple">
+    <main>
+      <div class="container" role="main">
+        <h2 class="black-text center">Horario</h2>
+        <hr class="center purple" noshade="noshade" size="2" width="80%"/> 
+
+        <table class="cal">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Lun</th>
+              <th>Mar</th>
+              <th>Mié</th>
+              <th>Jue</th>
+              <th>Vie</th>
+      
+            </tr>
+      
+          </thead>
+      
+          <tbody>
+            <tr>
+              <td class="horas">0:00 a 7:00</td>
+              <td class="Lengua">Lengua*<span> Aula</span></td>
+              <td class="Mates">Mates *<span> Aula</span></td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+              <td class="Mates">Mates *<span> Aula </span> </td>
+              <td class="Edfisica">Educación física*<span> Gimnasio</span> </td>
+      
+            </tr>
+          
+            <tr>
+              <td class="horas">7:00 a 11:00</td>
+              <td class="Ingles">Inglés*<span> Aula</span></td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+              <td class="Musica">Musica *<span> Aula musica</span></td>
+              <td class="Ingles">Inglés*<span> Aula</span></td>
+              <td class="Lengua">Lengua *<span> Aula</span></td>
+            </tr>
+            <tr>
+              <td class="horas">11:00 a 13:00</td>
+              <td class="Lengua">Lengua*<span> Aula</span></td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+              <td class="Lengua">Lengua*<span>Aula</span></td>
+              <td class="Ingles">Inglés *<span> Aula</span></td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+      
+            </tr>
+            <tr>
+              <td class="horas">13:00 a 20:00</td>
+              <td class="recreo">Recreo *<span> Patio</span></td>
+              <td class="recreo">Recreo  *<span> Patio</span></td>
+              <td class="recreo">Recreo  *<span> Patio</span></td>
+              <td class="recreo">Recreo  *<span> Patio</span></td>
+              <td class="recreo">Recreo  *<span> Patio</span></td>
+      
+            <tr>
+              <td class="horas">20:00 a 0:00</td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+              <td class="Musica">Música *<span> Aula música</span></td>
+              <td class="Lengua">Lengua *<span> Aula</span></td>
+              <td class="Tecno"> Tecnología *<span> Info2</span></td>
+              <td class="Mates">Mates *<span> Aula </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>  
+
+    <footer class="page-footer black">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -78,5 +148,6 @@
       <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../js/init.js"></script>
+
   </body>
 </html>

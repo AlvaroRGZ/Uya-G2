@@ -1,13 +1,3 @@
-/* 
-$(document).ready(function(){
-  $('.parallax').parallax();
+document.addEventListener('DOMContentLoaded', function() {
+  M.AutoInit();
 });
-
-(function($){
-  $(function(){
-    
-    $('.sidenav').sidenav();
-    
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-*/
