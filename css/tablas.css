@@ -1,6 +1,6 @@
 table.cal {
 	display:inline-block;
-	min-height:600px;
+	min-height:300px;
 	width:97%;
 	vertical-align: auto;
 	color: #06425c;
@@ -45,7 +45,7 @@ table.cal>tbody> th,td
 	display:in-line;	
 	width:10%;margin: 2%;
 	padding:2%;
-  border-bottom: 1px solid black;
+  	border-bottom: 1px solid black;
 	height: 60px;
 	vertical-align:top;
 
