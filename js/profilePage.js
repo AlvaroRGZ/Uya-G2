@@ -15,6 +15,8 @@ var firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+var userSelected;
+var userData;
 
 $(document).ready(function( event ) {
   const dbRef = ref(getDatabase());
@@ -25,7 +27,9 @@ $(document).ready(function( event ) {
       var userName;
       for (const user in data) {
         if (data[user].login == true) {
+          userSelected = user;
           userName = capitalize(user);
+          userData = data[user];
           $( "<h2/>", {
             class: "black-text",
             html: userName
@@ -46,6 +50,33 @@ $(document).ready(function( event ) {
   });
 });
 
-export function informationClick() {
+document.getElementById("cerrar_sesion").addEventListener("click", closeSesion);
 
+function closeSesion() {
+  console.log(userData);
+  set(ref(db, 'users/' + userSelected), {
+    birthday: userData.birthday,
+    dni: userData.dni,
+    email: userData.email,
+    login: false,
+    name: userData.name,
+    pago: userData.pago,
+    password: userData.password
+  })
+  .then(() => {
+    $( "<p/>", {
+      "id": "ok-message",
+      html: "Cerrando sesión..."
+    }).appendTo( "#contentProfile" );
+  })
+  .catch((error) => {
+    console.log(error);
+    $( "<p/>", {
+      "class": "red-text",
+      "id": "error-message",
+      html: "Error"
+    }).appendTo( "#login-error-message" );
+  });
+  setTimeout( function() {window.location.href = "./index.html";}, 1500);
+  return
 }
