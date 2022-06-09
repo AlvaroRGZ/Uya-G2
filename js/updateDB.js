@@ -15,7 +15,7 @@ var firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-export function writeUsers(brithday, dni, email, name, password, pago, login) {
+export function writeUsers(brithday, dni, email, name, password, pago, telf, login) {
   const newInfo = {
     brithday: brithday,
     dni: dni,
@@ -23,7 +23,8 @@ export function writeUsers(brithday, dni, email, name, password, pago, login) {
     login: login,
     name: name,
     pago: pago,
-    password: password
+    password: password,
+    telf: telf
   }
 
   const key = push(child(ref(db), 'users')).key;

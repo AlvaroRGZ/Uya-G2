@@ -1,13 +1,9 @@
 table.cal {
 	display:inline-block;
-	min-height:300px;
-	width:97%;
-	vertical-align: auto;
+	min-height:00px;
+	width: 75%;
 	color: #06425c;
 	border-spacing:0;
-	border-radius: 20px 20px 20px 20px;
-	padding: 2%;
-	margin: 2%;
 }
 
 thead > tr > th {
@@ -29,7 +25,6 @@ tr:last-child {
 }
 
 tr:nth-child(odd) {
-	
 	border-radius: 10px 10px 10px 10px;
 	padding:1%;
 	margin:1%;
@@ -48,8 +43,7 @@ table.cal>tbody> th,td
   	border-bottom: 1px solid black;
 	height: 60px;
 	vertical-align:top;
-
-	text-align: center;
+	align-content: center;
 	border-radius: 10px;
 }
 

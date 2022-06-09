@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Carta</title>
+    <title>Pedidos</title>
     
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,73 +28,165 @@
       <div class="nav-wrapper container" role="navigation">
         <div class="col s12">
           <a href="index.html" class ="breadcrumb black-text lighten-1" role="link">Inicio</a>
+          <a href="pedidos.html" class ="breadcrumb black-text lighten-1" aria-current="location" role="link">Pedidos</a>
         </div>
       </div>
   </nav>
 
-    <main>
-      <div class="container" role="main">
-        <h2 class="black-text center">Realiza tu pedido</h2>
-        <hr class="center black" noshade="noshade" size="2" width="80%" />
+  <main>
+    <div class="container"> 
+      <div class="row">
+        <div class="col s12 m6 l12 center-align">
+          <h2 class="text-darken-3">Pedidos</h2>
+          <hr class="center black" noshade="noshade" size="2" width="20%"/> 
+        </div> 
+      </div>
+
+      <div id="login-on" style="display:none;" class="container">
+        <div class="row center">
+          <div class="col s12 m6 l12">
+            <h3 class="text-darken-3">Seleccione los productos que desee</h3>
+          </div> 
+        </div>
+        
         <div class="row">
-          <div class="col-md-6 center-align">
-            <form method="post" name="contactForm">
-              <div class="form-group">
-                <label class="col-md-6 center-align" for="name">Name</label>
-                <input type="text" class="form-control" id="name" required placeholder="Enter name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" required placeholder="Enter Email">
-              </div>
-              <button type="submit" class="btn btn-primary addValue">Submit</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <ul id="contacts" class="list-group">
-              <!-- Contact Object li.list-group-item.contact will be added here by js -->
-            </ul>
+          <div class="col s12 m6 l12 center" id="login-error-message">            
           </div>
         </div>
-      </div> 
-    </main>
-    
-    <footer class="page-footer black">
+  
+        <div class="row center">
+          <form method="post">
+            <div class="row">
+              <div class="col s6 m6 l6">
+                <h4>Bebidas</h4>
+                <label for="selAgua">Agua : 1.00€ </label>
+                <input class="center" id="selAgua" type="number" aria-label="Agua, 1€, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selJugo">Jugo : 1.80€ </label>
+                <input class="center" id="selJugo" type="number" aria-label="Jugo, 1.8 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selRefresco">Refresco : 2.00€ </label>
+                <input class="center" id="selRefresco" type="number" aria-label="Refresco, 2 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selTe">Te : 1.00€ </label>
+                <input class="center" id="selTe" type="number" aria-label="Té, 1€, inserte cantidad" value="0" min="0" max="10">
+              </div>
+              <div class="col s6 m6 l6">
+                <h4>Cafés</h4>
+                <label for="selSolo">Solo : 0.50€ </label>
+                <input class="center" id="selSolo" type="number" aria-label="Café Solo, 50 centimos, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selCortado">Cortado : 0.80€ </label>
+                <input class="center" id="selCortado" type="number" aria-label="Cortado, 80 centimos, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selBarraquito">Barraquito : 1.00€ </label>
+                <input class="center" id="selBarraquito" type="number" aria-label="Barraquito, 1€, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selAmericano">Americano : 1.20€ </label>
+                <input class="center" id="selAmericano" type="number" aria-label="Café Americano, 1.2 euros, inserte cantidad" value="0" min="0" max="10">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6 m6 l6">
+                <h4>Bocadillos</h4>
+                <label for="selMixtoBoc">Mixto : 1,00€ </label>
+                <input class="center" id="selMixtoBoc" type="number" aria-label="Bocadillo Mixto, 1€, inserte cantidad"  value="0" min="0" max="10">
+                <br>
+                <label for="selPolloBoc">Pollo : 1,20€ </label>
+                <input class="center" id="selPolloBoc" type="number" aria-label="Bocadillo de Pollo, 1.2 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selSerranoBoc">Serrano : 1,70€ </label>
+                <input class="center" id="selSerranoBoc" type="number" aria-label="Bocadillo de Serrano, 1.7 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selTortillaBoc">Tortilla : 1,60€ </label>
+                <input class="center" id="selTortillaBoc" type="number" aria-label="Bocadillo de Tortilla, 1.6 euros, inserte cantidad" value="0" min="0" max="10">
+              </div>
+              <div class="col s6 m6 l6">
+                <h4>Sandwiches</h4>
+                <label for="selMixtoSand">Mixto : 1,00€ </label>
+                <input class="center" id="selMixtoSand" type="number" aria-label="Sandwich Mixto, 1€, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selPolloSand">Pollo : 1,20€ </label>
+                <input class="center" id="selPolloSand" type="number" aria-label="Sandwich Pollo, 1.2 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selSerranoSand">Serrano : 1,70€ </label>
+                <input class="center" id="selSerranoSand" type="number" aria-label="Sandwich Serrano, 1.7 euros, inserte cantidad" value="0" min="0" max="10">
+                <br>
+                <label for="selAtunSand">Atún : 1,30€ </label>
+                <input class="center" id="selAtunSand" type="number" aria-label="Sandwich Atún, 1.3 euros, inserte cantidad" value="0" min="0" max="10">
+              </div>
+            </div>
+            <div class="row">
+              <div id="recount-total-price" class="col s12 m6 l12">
+
+              </div>
+            </div>
+            <a class="waves-effect waves-light btn" id="confirmPedidos" role="button" aria-label="Confirmar" tabindex="0">Confirmar</a>
+          </form>
+        </div>  
+      </div>
+  
+      <div id="login-off" style="display:none;" class="container">
+        <div class="row">
+          <div class="col s12 m6 l12">
+            <p tabindex="0">Para realizar un pedido en nuestra página, antes debe iniciar sesión. Para ello, haga click en el siguiente enlace.</p>
+            <a href="login.html" class ="breadcrumb black-text lighten-1" role="link" tabindex="0">Iniciar Sesión</a>
+          </div>
+          <div class="col s12 m6 l12">
+            <p tabindex="0">¿Aún no tiene una cuenta en nuestra web? Registrese ahora mismo, haga click en el siguiente enlace.</p>
+            <a href="register.html" class ="breadcrumb black-text lighten-1" role="link" tabindex="0">Registrarse</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="pedidoDone" class="container"></div>
+
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="container" role="main">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text" role="heading" tabindex="0" aria-label="Quienes Somos">UyA-mos a comer</h5>
+          <p tabindex="0"class="grey-text text-lighten-4">
+            Somos un equipo de estudiantes universitarios trabajando en este proyecto como si fuera nuestro trabajo de tiempo completo.</p>
+          <p tabindex="0" aria-label="Ubicación" class="grey-text text-lighten-4">
+            Nos encontramos en:
+            <br>
+            <a target="_blank" href="https://goo.gl/maps/hLy1idBqjetLd2VA9">Av. Astrofisico Francisco Sánchez, 38203 San Cristóbal de La Laguna, Santa Cruz de Tenerife</a></p>
+          <p class="grey-text text-lighten-4">Contacto</p>
+          <ul tabindex="0" aria-label="Contacto" role="list">
+            <li role="listitem" tabindex="0">Correo electrónico: uyamoscomidos@etsii.es</li>
+            <li role="listitem" tabindex="0">Número de contacto: 922 99 88 77</li>
+        </div>
+        <div class="col l3 s12">
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text" role="heading" tabindex="0">Mapa</h5>
+          <ul role="list">
+            <li role="listitem"><a class="white-text" href="carta.html" role="link">Carta</a></li>
+            <li role="listitem"><a class="white-text" href="horario.html" role="link">Horario</a></li>
+            <li role="listitem"><a class="white-text" href="pedidos.html" role="link">Pedidos</a></li>
+            <li role="listitem"><a class="white-text" href="login.html" role="link">Iniciar Sesión</a></li>
+            <li role="listitem"><a class="white-text" href="register.html" role="link">Registrarse</a></li>
+            <li role="listitem"><a class="white-text" href="profile.html" role="link">Perfil</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text" role="heading" tabindex="0">UyA-mos a comer</h5>
-            <p class="grey-text text-lighten-4">
-              Somos un equipo de estudiantes universitarios trabajando en este proyecto como si fuera nuestro trabajo de tiempo completo.
-            </p>
-
-
-          </div>
-          <div class="col l3 s12">
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text" role="heading" tabindex="0">Mapa</h5>
-            <ul role="list">
-              <li role="listitem"><a class="white-text" href="carta.html" role="link">Carta</a></li>
-              <li role="listitem"><a class="white-text" href="horario.html" role="link">Horario</a></li>
-              <li role="listitem"><a class="white-text" href="pedidos.html" role="link">Pedidos</a></li>
-            </ul>
-          </div>
-        </div>
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com" role="link" aria-hidden="true">Materialize</a>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com" role="link" aria-hidden="true">Materialize</a>
-        </div>
-      </div>
-    </footer>                   
+    </div>
+  </footer>                             
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="../js/materialize.js"></script>
       <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="module" src="../js/loginStatus.js" type="text/javascript"> </script>
-    <script type="module" src="../js/obtenerCarta.js" type="text/javascript"> </script>
     <script src="../js/init.js"></script>
+    <script type="module" src="../js/pedidosPage.js" type="text/javascript"> </script>
   </body>
 </html>

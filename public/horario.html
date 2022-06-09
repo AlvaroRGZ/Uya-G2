@@ -29,8 +29,9 @@
           <ul id="login-status" class="right hide-on-med-and-down"></ul>
       </div>
       <div class="nav-wrapper container" role="navigation">
-        <div class="col s12">
+        <div id="breadcumbs-div" class="col s12">
           <a href="index.html" class ="breadcrumb black-text lighten-1" role="link">Inicio</a>
+          <a href="horario.html" class ="breadcrumb black-text lighten-1" aria-current="location" role="link">Horario</a>
         </div>
       </div>
     </nav>
@@ -39,13 +40,13 @@
       <br><br>
         <div class="container" style="text-align: center" role="main">
           <div class="row">
-            <div class="col s11 m6 l11">
-              <h2 class="black-text center">Horario</h2>
+            <div class="col s12 m6 l11">
+              <h1 class="black-text center">Horario</h1>
               <hr class="center purple" noshade="noshade" size="2" width="80%"/> 
             </div>
           </div>
           <div class="row">
-            <div class="col s11 m6 l11">
+            <div class="col s12 m6 l12 center-align">
               <table class="cal" role="table">
                 <thead role="rowgroup">
                   <tr role="row">
@@ -87,15 +88,20 @@
     </main>  
 
     <footer class="page-footer black">
-      <div class="container">
+      <div class="container" role="main">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text" role="heading" tabindex="0">UyA-mos a comer</h5>
-            <p class="grey-text text-lighten-4">
-              Somos un equipo de estudiantes universitarios trabajando en este proyecto como si fuera nuestro trabajo de tiempo completo.
-            </p>
-
-
+            <h5 class="white-text" role="heading" tabindex="0" aria-label="Quienes Somos">UyA-mos a comer</h5>
+            <p tabindex="0"class="grey-text text-lighten-4">
+              Somos un equipo de estudiantes universitarios trabajando en este proyecto como si fuera nuestro trabajo de tiempo completo.</p>
+            <p tabindex="0" aria-label="Ubicación" class="grey-text text-lighten-4">
+              Nos encontramos en:
+              <br>
+              <a target="_blank" href="https://goo.gl/maps/hLy1idBqjetLd2VA9">Av. Astrofisico Francisco Sánchez, 38203 San Cristóbal de La Laguna, Santa Cruz de Tenerife</a></p>
+            <p class="grey-text text-lighten-4">Contacto</p>
+            <ul tabindex="0" aria-label="Contacto" role="list">
+              <li role="listitem" tabindex="0">Correo electrónico: uyamoscomidos@etsii.es</li>
+              <li role="listitem" tabindex="0">Número de contacto: 922 99 88 77</li>
           </div>
           <div class="col l3 s12">
           </div>
@@ -105,6 +111,9 @@
               <li role="listitem"><a class="white-text" href="carta.html" role="link">Carta</a></li>
               <li role="listitem"><a class="white-text" href="horario.html" role="link">Horario</a></li>
               <li role="listitem"><a class="white-text" href="pedidos.html" role="link">Pedidos</a></li>
+              <li role="listitem"><a class="white-text" href="login.html" role="link">Iniciar Sesión</a></li>
+              <li role="listitem"><a class="white-text" href="register.html" role="link">Registrarse</a></li>
+              <li role="listitem"><a class="white-text" href="profile.html" role="link">Perfil</a></li>
             </ul>
           </div>
         </div>
@@ -114,7 +123,7 @@
         Made by <a class="brown-text text-lighten-3" href="http://materializecss.com" role="link" aria-hidden="true">Materialize</a>
         </div>
       </div>
-    </footer>           
+    </footer>                    
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="../js/materialize.min.js"></script>

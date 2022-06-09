@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import { getDatabase, ref, set, onValue, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-import { writeUsers } from './updateDB.js';
+
 var firebaseConfig = {
     apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
     authDomain: "uya-g2-674ce.firebaseapp.com",
@@ -16,6 +16,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 document.getElementById("clickLogin").addEventListener("click", checkLogin);
+document.getElementById("clickLogin").addEventListener("keypress", checkLogin);
 
 function checkLogin() {
   var element = document.getElementById("error-message");
@@ -42,7 +43,8 @@ function checkLogin() {
               login: true,
               name: userData.name,
               pago: userData.pago,
-              password: userData.password
+              password: userData.password,
+              telf: userData.telf
             })
             .then(() => {
               $( "<p/>", {

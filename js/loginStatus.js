@@ -1,6 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import { getDatabase, ref, set, onValue, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-import { capitalize } from "./showCarta.js";
+
+export function capitalize(inString) {
+  return inString.charAt(0).toUpperCase() + inString.slice(1);
+}
 
 var firebaseConfig = {
     apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
@@ -15,6 +18,7 @@ var firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+export var userSelected = "";
 
 $(document).ready(function( event ) {
   const dbRef = ref(getDatabase());
@@ -26,6 +30,7 @@ $(document).ready(function( event ) {
       var userName;
       for (const user in data) {
         if (data[user].login == true) {
+          userSelected = user;
           userName = user;
           login_on = true;
           break;
